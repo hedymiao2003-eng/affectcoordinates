@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affect Coordinates</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Cover / Hero section -->
+  <section id="heroSection" class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="floating-shape shape-one"></div>
+    <div class="floating-shape shape-two"></div>
+    <div class="floating-shape shape-three"></div>
+    <div class="floating-shape shape-four"></div>
+    <div class="hero-image-card card-one"></div>
+    <div class="hero-image-card card-two"></div>
+    <div class="hero-image-card card-three"></div>
+    <div class="hero-image-card card-four"></div>
+    <div class="hero-image-card card-five"></div>
+    <div class="hero-image-card card-six"></div>
+    <nav class="hero-nav" aria-label="Exhibition navigation">
+      <button class="hero-nav-button" data-target="mapSection">Map</button>
+      <button class="hero-nav-button" data-target="methodSection">Method</button>
+      <button class="hero-nav-button" data-target="ambiguousSection">
+        Ambiguous<br>Readings
+      </button>
+      <button class="hero-nav-button" data-target="audienceSection">Rating</button>
+      <button class="hero-nav-button" data-target="contactSection">Contact Us</button>
+     <a href="#accessibleSection" class="hero-nav-button" data-target="accessibleSection">
+      Accessible<br>Entrance
+    </a>
+</div>
+</nav>
+
+    <div class="hero-content">
+      <h1>
+        Affect Coordinates<br>
+        <span>A colour-based exhibition of image atmosphere</span>
+      </h1>
+
+    <p class="hero-project-intro">
+      Affect Coordinates explores how hue, saturation and brightness<br>
+      can place images on a Valence–Arousal map.<br>
+      Valence describes how unpleasant or pleasant an image may feel;<br>
+      arousal describes how calm or intense it may feel.<br>
+      The map is not a final judgement of emotion,<br>
+      but a colour-based reading open to human interpretation.
+    </p>
+
+    <p class="viewing-note">
+      Best viewed on desktop in full screen.
+    </p>
+
+    <div class="hero-actions">
+      <button id="enterMapButton" class="hero-button">
+        Enter the Map
+      </button>
+
+      <div class="hero-access-entry">
+        <button class="hero-access-trigger" type="button">
+          New to the exhibition?
+        </button>
+
+        <div class="hero-access-panel">
+          <p>
+            Prefer a simpler route? Listen to audio guides in English, Chinese and Spanish through the Accessible Entrance.
+          </p>
+
+          <a href="#accessibleSection" class="hero-access-link">
+            Start Accessible Entrance
+          </a>
+        </div>
+      </div>
+
+     <p class="hero-credit">
+       A dissertation project by Hanwen Miao<br>
+       MA Digital Humanities, King’s College London
+     </p>
+  </section>
+
+  <!-- 2D Map section -->
+  <main id="mapSection" class="map-page">
+    <section class="map-section">
+      <div class="map-intro">
+        <p class="map-eyebrow">Interactive Map</p>
+
+        <h2>Valence–Arousal Map</h2>
+
+        <p class="map-description">
+            Each image is mapped from its HSV colour features<br>
+            through a colour–affect mapping formula for Valence and Arousal<br>
+            and arranged into four affective quadrants below
+        </p>
+      </div>
+
+      <div class="status-block">
+        <div id="statusMessage" class="status-message">Loading image data...</div>
+        <p class="map-hint">Click a point to view the image</p>
+      </div>
+
+      <div id="vaMap" class="map-wrapper">
+        <div class="center-line-vertical"></div>
+        <div class="center-line-horizontal"></div>
+
+        <div class="axis-label axis-top">High Arousal</div>
+        <div class="axis-label axis-bottom">Low Arousal</div>
+        <div class="axis-label axis-left">Low Valence</div>
+        <div class="axis-label axis-right">High Valence</div>
+
+        <div class="quadrant-label q1">High Valence / High Arousal</div>
+        <div class="quadrant-label q2">Low Valence / High Arousal</div>
+        <div class="quadrant-label q3">Low Valence / Low Arousal</div>
+        <div class="quadrant-label q4">High Valence / Low Arousal</div>
+
+        <div class="axis-arrow arrow-up"></div>
+        <div class="axis-arrow arrow-down"></div>
+        <div class="axis-arrow arrow-left"></div>
+        <div class="axis-arrow arrow-right"></div>
+
+      </div>
+
+      <div class="map-nav">
+        <button id="goMethodButton" class="section-link-button">
+          How the Map Works
+        </button>
+
+        <button class="section-link-button back-to-home-button" type="button">
+          Back to Home
+        </button>
+      </div>
+    </section>
+  </main>
+
+<!-- Method section -->  
+<section id="methodSection" class="method-page">
+  <div class="method-hero reveal-on-scroll">
+    <div class="method-hero-text reveal-on-scroll">
+      <h2>
+        How the<br>
+        Map Works
+      </h2>
+      <p class="method-lead">
+        This map does not detect emotion directly.<br>
+        It translates HSV colour features into Valence–Arousal coordinates<br>
+        so that images can be browsed through colour-based atmosphere.
+      </p>
+
+    </div>
+
+    <div class="mini-va-diagram reveal-on-scroll">
+      <div class="mini-axis vertical"></div>
+      <div class="mini-axis horizontal"></div>
+
+      <span class="mini-label top">High Arousal</span>
+      <span class="mini-label bottom">Low Arousal</span>
+      <span class="mini-label left">Low Valence</span>
+      <span class="mini-label right">High Valence</span>
+
+<div class="mini-quadrant quad-lh">
+  <div class="mini-symbol-wrap">
+    <div class="mini-symbol">⚡</div>
+    <div class="mini-hover-note">
+      <h4>Low Valence / High Arousal</h4>
+      <p>Tense; Intense; Unsettled</p>
+    </div>
+  </div>
+</div>
+
+<div class="mini-quadrant quad-hh">
+  <div class="mini-symbol-wrap">
+    <div class="mini-symbol">☀</div>
+    <div class="mini-hover-note">
+      <h4>High Valence / High Arousal</h4>
+      <p>Luminous; Energetic; Vivid</p>
+    </div>
+  </div>
+</div>
+
+<div class="mini-quadrant quad-ll">
+  <div class="mini-symbol-wrap">
+    <div class="mini-symbol">☁</div>
+    <div class="mini-hover-note">
+      <h4>Low Valence / Low Arousal</h4>
+      <p>Muted; Quiet; Subdued</p>
+    </div>
+  </div>
+</div>
+
+<div class="mini-quadrant quad-hl">
+  <div class="mini-symbol-wrap">
+    <div class="mini-symbol">☘</div>
+    <div class="mini-hover-note">
+      <h4>High Valence / Low Arousal</h4>
+      <p>Soft; Calm; Gentle</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+  <div class="method-grid two-columns reveal-on-scroll">
+    <article class="method-card large-method-card valence-card">
+      <div class="method-icon">♡</div>
+
+      <div class="method-card-text">
+        <h3>Valence</h3>
+        <div class="method-deco-line"></div>
+        <p>
+          Valence describes how positive or negative an image may feel.
+          In this project, lower values suggest a more uncomfortable, heavy or negative atmosphere,
+          while higher values suggest a more pleasant, luminous or positive atmosphere.
+      </p>
+    </div>
+  </article>
+
+    <article class="method-card large-method-card arousal-card">
+      <div class="method-icon">〰</div>
+
+      <div class="method-card-text">
+        <h3>Arousal</h3>
+        <div class="method-deco-line"></div>
+        <p>
+          Arousal describes how calm or intense an image may feel.
+          In this project, lower values suggest stillness or softness, while higher values suggest
+          intensity, energy, or visual stimulation.
+      </p>
+    </div>
+  </article>
+</div>
+
+<div class="method-grid three-columns reveal-on-scroll">
+  <article class="method-card small-card feature-card hue-card">
+    <div class="small-method-icon">◌</div>
+    <h3>Hue</h3>
+    <div class="method-deco-line small-line"></div>
+    <p>
+      Hue describes the dominant colour tendency of an image,
+      such as red, blue, or green.
+    </p>
+  </article>
+
+  <article class="method-card small-card feature-card saturation-card">
+    <div class="small-method-icon">✺</div>
+    <h3>Saturation</h3>
+    <div class="method-deco-line small-line"></div>
+    <p>
+      Saturation describes how vivid or muted the colours are.
+      Higher saturation may contribute to stronger visual energy.
+    </p>
+  </article>
+
+  <article class="method-card small-card feature-card brightness-card">
+    <div class="small-method-icon">☼</div>
+    <h3>Brightness</h3>
+    <div class="method-deco-line small-line"></div>
+    <p>
+      Brightness describes how light or dark the image appears.
+      Brighter images may contribute to a more open affective reading.
+    </p>
+  </article>
+</div>
+
+  <article id="formulaCard" class="formula-card reveal-on-scroll">
+    <div class="formula-text">
+      <p class="method-eyebrow">From colour to coordinates</p>
+      <h3>Formula and Calibration</h3>
+        <p>
+          This formula is a transparent way of turning colour features into map positions.
+          It is based on the idea that images can feel more positive or negative, and more calm or intense.
+          It also draws on colour-emotion research showing that brightness, saturation, and hue can influence how an image feels.
+        </p>
+        <p class="formula-note">
+          V_model and A_model are informed by Valence–Arousal theory and colour-emotion research (Wilms & Oberfeld, 2018).
+        </p>
+    </div>
+
+    <div class="formula-flow">
+      <article class="formula-step step-one">
+        <span class="formula-step-number">01</span>
+        <h4>Read HSV colour features</h4>
+      </article>
+
+      <div class="formula-arrow">→</div>
+
+      <article class="formula-step step-two">
+        <span class="formula-step-number">02</span>
+        <h4>Calculate V_model and A_model</h4>
+      </article>
+
+      <div class="formula-arrow">→</div>
+
+      <article class="formula-step step-three">
+        <span class="formula-step-number">03</span>
+        <h4>Calibrate with author ratings</h4>
+      </article>
+
+      <div class="formula-arrow">→</div>
+
+      <article class="formula-step step-four">
+        <span class="formula-step-number">04</span>
+        <h4>Place V_cal and A_cal on the map</h4>
+      </article>
+    </div>
+
+    <div class="formula-lines">
+      <div class="formula-line-group formula-model-group">
+        <p><strong>V_model</strong> = 0.70 × B + 0.30 × S</p>
+        <p><strong>A_model</strong> = 0.60 × S + 0.20 × B</p>
+        <p class="formula-continuation">+ 0.15 × (R × S) − 0.05 × (Bl × S)</p>
+      </div>
+
+      <div class="formula-divider"></div>
+
+      <div class="formula-line-group formula-calibration-group">
+        <p><strong>V_cal</strong> = 0.34 + 0.45 × V_model</p>
+        <p><strong>A_cal</strong> = 0.17 + 0.86 × A_model</p>
+      </div>
+
+      <p class="formula-note">
+        B = brightness mean · S = saturation mean · R = red ratio · Bl = blue ratio.<br>
+        V_model and A_model are initial model estimates; V_cal and A_cal are calibrated map coordinates.
+      </p>
+    </div>    
+  </article>
+
+    <article class="limits-card reveal-on-scroll">
+      <p class="method-eyebrow">Interpretation remains open</p>
+      <h3>Theory and Limits</h3>
+      <p>
+        Colour is only one doorway into an image.
+        This map makes a colour-based reading visible, but it does not close interpretation.
+        Image atmosphere can also be shaped by subject matter, composition, memory and context.
+      </p>
+
+      <button id="openLimitsPanelButton" class="limits-panel-button" type="button">
+        Read more
+      </button>
+    </article>
+
+    <div id="limitsPanel" class="limits-panel hidden" role="dialog" aria-modal="true" aria-labelledby="limitsPanelTitle">
+      <div class="limits-panel-content">
+        <button id="closeLimitsPanelButton" class="limits-panel-close" type="button" aria-label="Close theory and limits panel">
+          ×
+        </button>
+
+        <p class="method-eyebrow">Theory and Limits</p>
+
+        <h3 id="limitsPanelTitle">Why Interpretation Remains Open</h3>
+
+        <p>
+          This project draws on colour-affect research suggesting that hue, saturation and brightness can influence perceived valence and arousal. For example, Wilms and Oberfeld show that brighter and more saturated colours tend to be associated with higher arousal and more positive affective responses (Wilms and Oberfeld, 2018).
+        </p>
+
+        <p>
+          However, these relationships are not treated as fixed emotional rules. Image atmosphere also depends on subject matter, composition, cultural context and the viewer’s own experience. Following Lin’s discussion of digital curatorial interpretation, the interface is therefore designed to make interpretation visible and open to discussion rather than final (Lin, 2024).
+        </p>
+
+        <p>
+          The map works as a transparent and reviewable interpretive layer: it places modelled readings, author interpretation and audience responses in relation to one another. The Ambiguous Readings section shows where the colour-based model becomes limited, unstable or open to interpretation.
+        </p>
+
+        <button id="limitsGoAmbiguousButton" class="limits-panel-cta" type="button">
+          Go to Ambiguous Readings
+        </button>
+      </div>
+    </div>
+
+  <div class="method-bottom-nav">
+  <button id="backToMapButton" class="section-link-button">
+    Back to the Map
+  </button>
+
+  <button class="section-link-button back-to-home-button" class="section-link-button">
+    Back to Home
+  </button>
+ </div> 
+</section>
+
+<section id="ambiguousSection" class="ambiguous-page">
+  <div class="ambiguous-hero">
+    <div class="ambiguous-hero-text reveal-on-scroll">
+      <h2>
+        Ambiguous<br>
+        Readings
+      </h2>
+
+      <p class="ambiguous-lead">
+        These images show where colour alone cannot fully explain how an image feels.
+        Through faces, gestures, composition, lighting, and atmosphere, they invite a slower, closer reading beyond the model’s first interpretation.
+      </p>
+
+      <div class="ambiguous-legend">
+        <div>
+          <span class="legend-dot legend-selected"></span>
+          Selected ambiguous cases
+        </div>
+      </div>
+    </div>
+
+    <div class="ambiguous-overview-card reveal-on-scroll">
+      <div class="ambiguous-mini-maps">
+        <div class="ambiguous-mini-map">
+          <h3>Initial Model Reading</h3>
+          <div class="ambiguous-map-box">
+            <div class="ambiguous-axis-v"></div>
+            <div class="ambiguous-axis-h"></div>
+
+            <div id="initialMiniPlot" class="ambiguous-mini-plot"></div>
+
+            <span class="ambiguous-axis-label top">High Arousal</span>
+            <span class="ambiguous-axis-label bottom">Low Arousal</span>
+            <span class="ambiguous-axis-label left">Low Valence</span>
+            <span class="ambiguous-axis-label right">High Valence</span>
+          </div>
+        </div>
+
+        <div class="ambiguous-arrow">→</div>
+
+        <div class="ambiguous-mini-map">
+          <h3>Calibrated Map Position</h3>
+          <div class="ambiguous-map-box">
+            <div class="ambiguous-axis-v"></div>
+            <div class="ambiguous-axis-h"></div>
+
+            <div id="calibratedMiniPlot" class="ambiguous-mini-plot"></div>
+
+            <span class="ambiguous-axis-label top">High Arousal</span>
+            <span class="ambiguous-axis-label bottom">Low Arousal</span>
+            <span class="ambiguous-axis-label left">Low Valence</span>
+            <span class="ambiguous-axis-label right">High Valence</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="ambiguous-overview-note">
+        Each point represents one selected case, comparing its initial model position with its calibrated map position.
+      </p>
+    </div>
+  </div>
+
+  <div class="ambiguous-section-title reveal-on-scroll">
+    <p class="ambiguous-eyebrow">Ambiguous Readings</p>
+    <h3>Selected Cases</h3>
+    <p>
+      Each card compares the initial model reading, the calibrated map position,
+      and the author rating. Open the reading to view the close reading for each image.
+    </p>
+  </div>
+
+  <div id="ambiguousGrid" class="ambiguous-grid" aria-live="polite">
+    <!-- Ambiguous case cards will be added here by JavaScript -->
+  </div>
+
+  <div id="ambiguousReadingTemplates" hidden>
+  <article data-reading-id="portrait_29_id5480559">
+    <p>
+      Both the model and author reading place this image in a low-valence, low-arousal area. 
+      The model reads this image as extremely low in valence because it is mostly near-black and dark grey, 
+      with almost no saturation, so colour has very little role in the reading. 
+      But the person’s gaze and clasped hands make the image feel more human, as if there is a quiet sadness behind the darkness. 
+      This shows that valence and arousal are also shaped by facial expression, gesture, and the viewer’s response to the subject.
+    </p>
+  </article>
+
+  <article data-reading-id="portrait_05_id32715718">
+    <p>
+      Both the model and author rating place this image in a low-valence, low-arousal area.
+      The model gives this image an extremely low score because of its black-and-white tones,
+      low brightness, and very low saturation.
+      The manual rating is not as extreme, because the image feels subdued and tense rather than simply negative.
+      The hands around the frame and their ghost-like reflections make the image feel emotionally present.
+      The colour-based model can capture the image’s dark mood, but it cannot fully capture how the visual elements,
+      composition, and narrative tension work together to shape the mood.
+    </p>
+  </article>
+
+  <article data-reading-id="nature_53_id7505236">
+    <p>
+     The model places this image in a low-valence, low-arousal area, while the author rating gives it a neutral valence and very low arousal. 
+     This is because the image feels dry, still and enclosed rather than emotionally intense for author. 
+     The tangled stems and dark gaps create a slightly uncomfortable atmosphere, but the overall image remains quiet and static. 
+     After calibration, however, the image moves into the low-valence, high-arousal quadrant. 
+     This case shows why the calibrated map position remains important to review rather than simply accept. 
+     Although calibration helps make the model readings more comparable across the dataset, 
+     this image still feels much lower in arousal in the author’s reading because of its dry texture and still composition.
+    </p>
+  </article>
+
+  <article data-reading-id="portrait_49_id33502968">
+    <p>
+      The model places the image in a low-valence, low-arousal area because its brightness and saturation are relatively low,
+      while the author gives this image a higher arousal score because the lighting and contrast make it feel more dramatic.
+      The warm side light and dark background create a stage-like effect, giving the body and face a stronger outline
+      and making the image feel more tense and visually intense.
+      This shows that emotion in photography can be shaped not only by colour features,
+      but also by lighting and viewer interpretation.
+    </p>
+  </article>
+
+  <article data-reading-id="nature_30_id26730566">
+    <p>
+      The model places the image in a low-valence, low-arousal area due to its relatively low brightness and saturation,
+      while the author gives it higher arousal and valence scores.
+      This is because the composition and subject matter feel more dynamic than the colour features alone suggest.
+      The foggy forest and the bright sunlight filtering through the branches and leaves create a pleasant and lively atmosphere.
+      The interaction between light, trees and fog also shapes the mood of the image, making it feel more vivid.
+    </p>
+  </article>
+
+  <article data-reading-id="nature_02_id35015619">
+    <p>
+      The model places the image in a low-valence, low-arousal area because the model responds mainly to the image’s low saturation
+      and brightness, which makes it read as quiet and subdued.
+      The author rating gives it a high valence, as the web-like lines and bright droplets make it feel calm and full of life,
+      rather than lifeless. Colour alone cannot explain everything it communicates;
+      its subject matter and the viewer’s perspective also shape the emotion it carries.
+    </p>
+  </article>
+
+  <article data-reading-id="urban_12_id29044602">
+    <p>
+      The model places the image in a low-valence, low-arousal area because of the image’s low saturation and brightness,
+      while the author gives it a relatively high valence score as the composition and light create a relaxing atmosphere.
+      The warm tones, angled sunlight and long shadows may create the feeling of a quiet weekend afternoon.
+      This makes the image feel calm and pleasant, rather than simply dark or low-energy.
+      This shows that the mood of an image can be shaped not only by brightness and saturation,
+      but also by tone, sunlight, shadow and composition.
+    </p>
+  </article>
+
+  <article data-reading-id="portrait_55_id31601627">
+    <p>
+      The model assigns this image a medium valence score and a low arousal score,
+      while the author rating shows the opposite pattern.
+      The model responds mainly to the image’s extremely low saturation, relatively high brightness,
+      as well as the contrast between the subject and the background.
+      However, the person's gesture and strong facial expression can lead viewers to read the image as more intense.
+      The colour-based model captures the visual brightness and contrast,
+      but it does not fully account for how gesture, expression, and context can shape emotional interpretation.
+    </p>
+  </article>
+</div>
+
+  <div class="ambiguous-bottom-nav">
+    <button id="backToMethodButton" class="section-link-button">
+      Back to How the Map Works
+    </button>
+
+    <button id="goAudienceButton" class="section-link-button">
+      Audience Annotation
+    </button>
+
+    <button class="section-link-button back-to-home-button" type="button">
+      Back to Home
+    </button>
+</div>
+
+  <div id="ambiguousModal" class="ambiguous-modal hidden" role="dialog" aria-modal="true" aria-labelledby="ambiguousModalTitle">
+    <div class="ambiguous-modal-content">
+      <button id="closeAmbiguousModal" class="ambiguous-close-button" type="button" aria-label="Close close reading">
+        ×
+      </button>
+
+      <div id="ambiguousModalBody">
+        <!-- Close reading content will be added here by JavaScript -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Audience Annotation section -->
+<section id="audienceSection" class="audience-page">
+  <div class="audience-hero reveal-on-scroll">
+    <p class="audience-eyebrow">Audience Annotation</p>
+
+    <h2>Your Reading Matters</h2>
+
+    <p class="audience-lead">
+      Now it’s your turn to share how these images feel to you.<br>
+      Your response becomes part of the comparison between colour-based mapping
+      and human interpretation.
+    </p>
+  </div>
+
+  <div class="data-use-trigger-wrap">
+    <button id="openDataUsePanelButton" class="data-use-trigger" type="button">
+      <span class="data-use-icon">?</span>
+      <span class="data-use-text">Data Use and Participation</span>
+    </button>
+  </div>
+
+<div id="dataUsePanel" class="data-use-panel hidden" role="dialog" aria-modal="true" aria-labelledby="dataUsePanelTitle">
+  <div class="data-use-panel-content">
+    <button id="closeDataUsePanelButton" class="data-use-panel-close" type="button" aria-label="Close data use panel">
+      ×
+    </button>
+
+    <p class="audience-eyebrow">Data Use</p>
+
+    <h3 id="dataUsePanelTitle">Data Use and Participation Terms</h3>
+
+    <ul class="data-use-list">
+      <li>Your ratings are anonymous and will only be used for this dissertation project.</li>
+      <li>The ratings help compare audience responses with the colour-based map and the author’s interpretation.</li>
+      <li>No name, email address or directly identifying information is required.</li>
+      <li>Optional background questions, such as age group and gender, include “Prefer not to say”.</li>
+      <li>After submitting your ratings, you will see a comparison between your ratings and the calibrated map position for the images you rated.</li>
+      <li>The data will be stored securely, kept for one year after the exhibition launch, and then deleted.</li>
+      <li>By starting the rating, you agree to take part under these terms.</li>
+    </ul>
+  </div>
+</div>
+
+  <div class="audience-info-grid reveal-on-scroll">
+    <article class="audience-info-card">
+      <span>01</span>
+      <h3>Look</h3>
+      <p>
+        View each image slowly and notice your first emotional response.
+      </p>
+    </article>
+
+    <article class="audience-info-card">
+      <span>02</span>
+      <h3>Rate Valence</h3>
+      <p>
+        Choose how unpleasant or pleasant the image feels to you.
+      </p>
+    </article>
+
+    <article class="audience-info-card">
+      <span>03</span>
+      <h3>Rate Arousal</h3>
+      <p>
+        Choose how calm or intense the image feels to you.
+      </p>
+    </article>
+  </div>
+
+  <form id="audienceRatingForm" class="audience-form reveal-on-scroll">
+    <div class="audience-form-intro">
+      <h3>Rate Five Images</h3>
+      <p>
+        You will be asked to rate five randomly selected images.<br>
+        There are no right or wrong answers — only your own reading.
+      </p>
+    </div>
+
+    <div class="audience-meta-grid">
+      <label for="audienceAgeGroup">
+        Age group
+        <select id="audienceAgeGroup" name="age_group">
+          <option value="">Prefer not to say</option>
+          <option value="18-24">18–24</option>
+          <option value="25-34">25–34</option>
+          <option value="35-44">35–44</option>
+          <option value="45-54">45–54</option>
+          <option value="55+">55+</option>
+        </select>
+      </label>
+
+      <label for="audienceGender">
+        Gender
+        <select id="audienceGender" name="gender">
+          <option value="">Prefer not to say</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="non_binary">Non-binary</option>
+          <option value="self_describe">Prefer to self-describe</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="audienceRatingGrid" class="audience-rating-grid">
+      <!-- Five random image rating cards will be added here by JavaScript -->
+    </div>
+
+    <div class="audience-submit-area">
+      <button type="submit" class="section-link-button audience-submit-button">
+        Submit My Reading
+      </button>
+
+      <p id="audienceSubmitMessage" class="audience-submit-message" aria-live="polite"></p>
+    </div>
+  </form>
+
+  <div id="audienceResultSection" class="audience-result-section hidden">
+    <div class="audience-result-intro">
+      <p class="audience-eyebrow">Your Reading Compared</p>
+      <h3>Your Reading Compared</h3>
+      <p>
+        Thank you. Your ratings have been recorded.<br>
+        Below, you can see how your reading compares with the calibrated map position
+        for the images you rated.
+      </p>
+    </div>
+
+    <div id="audienceResultGrid" class="audience-result-grid">
+      <!-- Comparison result cards will be added here by JavaScript -->
+    </div>
+
+    <div class="audience-result-nav">
+      <a href="#heroSection" class="section-link-button audience-result-link">
+        Back to Home
+      </a>
+
+      <a href="#contactSection" class="section-link-button audience-result-link">
+        Contact Us
+      </a>    
+    </div>
+  </div> 
+</section>
+
+<!-- Contact section -->
+<section id="contactSection" class="contact-page">
+  <div class="contact-hero reveal-on-scroll">
+    <p class="contact-eyebrow">Contact Us</p>
+
+    <h2>Leave a Note</h2>
+
+    <p class="contact-lead">
+      Thank you for visiting Affect Coordinates.<br>
+      Feedback, questions, and issue reports are all welcome.
+    </p>
+
+    <div class="contact-heart">♥</div>
+  </div>
+
+  <div class="contact-grid reveal-on-scroll">
+    <article class="contact-card feedback-card">
+      <span>01</span>
+      <h3>Share Feedback</h3>
+      <p>
+        Tell me how the exhibition felt to you, what was clear,
+        and what could be improved.
+      </p>
+
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdcAnYmzCNzi09LegJhB_OU4dWvLWvi1aLGzJBa7flweA5Jgg/viewform?usp=publish-editor"
+        class="contact-card-link feedback-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Send Feedback →
+      </a>
+    </article>
+
+    <article class="contact-card issue-card">
+      <span>02</span>
+      <h3>Report an Issue</h3>
+      <p>
+        If something does not load, feels confusing, or is difficult
+        to access, you can let me know.
+      </p>
+
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdcAnYmzCNzi09LegJhB_OU4dWvLWvi1aLGzJBa7flweA5Jgg/viewform?usp=publish-editor"
+        class="contact-card-link issue-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Report an Issue →
+      </a>
+    </article>
+
+<!--
+    <article class="contact-card biscuit-card">
+      <span>03</span>
+      <h3>Buy Me a Biscuit</h3>
+      <p>
+        If this project gave you a moment of curiosity, reflection, or joy,
+        you are welcome to support it with a small biscuit🍪.
+      </p>
+
+      <p class="biscuit-note">
+        This is entirely optional — a small gesture of encouragement,
+        not a requirement.
+      </p>
+
+      <a
+        href="https://paypal.me/hanwenmiao"
+        class="contact-card-link biscuit-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Buy Me a Biscuit →
+      </a>
+    </article>
+    -->
+  </div>
+
+<!--
+  <div class="contact-email-card reveal-on-scroll">
+    <div class="contact-email-icon">✉</div>
+
+    <div class="contact-email-text">
+      <h3>Email the Project</h3>
+      <p>
+        You can also email me directly.<br>
+        I will do my best to reply when I can.
+      </p>
+    </div>
+
+    <a
+      href="mailto:k25023486@kcl.ac.uk?subject=Affect%20Coordinates"
+      class="contact-email-link"
+    >
+      k25023486@kcl.ac.uk
+    </a>
+  </div>
+-->
+
+  <div class="contact-note-card reveal-on-scroll">
+    <div class="contact-note-icon">✧</div>
+
+    <div>
+      <h3>A Note on Your Contribution</h3>
+      <p>
+        Feedback and issue reports are anonymous unless you choose to leave contact details in the form.
+        They help improve the project and support this research.<br>
+        Thank you for being part of this exploration.
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-address reveal-on-scroll">
+    <div class="contact-address-icon">
+      <span>📍</span>
+  </div>
+
+    <div class="contact-address-text">
+      <p class="contact-address-label">Institutional Address</p>
+      <p>
+        King’s College London<br>
+        Strand<br>
+        London WC2R 2LS<br>
+        United Kingdom
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-bottom-nav reveal-on-scroll">
+    <a href="#heroSection" class="contact-home-link">
+      Back to Home
+    </a>
+  </div>
+
+  <footer class="contact-footer">
+    Affect Coordinates © 2026 · Designed with curiosity and care
+  </footer>
+</section>
+
+<!-- Accessible Entrance section -->
+<section id="accessibleSection" class="accessible-page">
+  <div class="accessible-hero reveal-on-scroll">
+    <p class="accessible-eyebrow">Accessible Entrance</p>
+
+    <h2>A Simpler Route Through the Exhibition</h2>
+
+    <p class="accessible-lead">
+      This page offers a quieter, text-led route through Affect Coordinates.
+      It does not require using the interactive map, hover effects, or pop-up windows.
+    </p>
+  </div>
+
+  <div class="accessible-audio-guide reveal-on-scroll">
+    <div class="accessible-audio-text">
+      <p class="accessible-eyebrow">Audio Guide</p>
+      <h3>Listen to a short introduction</h3>
+      <p>
+        This short audio guide introduces the project, the Valence–Arousal map,
+        the selected ambiguous cases, and the audience annotation section.
+      </p>
+    </div>
+
+<div class="audio-language-switcher">
+  <button class="audio-lang-button active" type="button" data-lang="en">
+    English
+  </button>
+
+  <button class="audio-lang-button" type="button" data-lang="zh">
+    中文
+  </button>
+
+  <button class="audio-lang-button" type="button" data-lang="es">
+    Español
+  </button>
+</div>
+
+<div class="audio-language-panel active" data-lang-panel="en">
+  <audio controls preload="none" class="accessible-audio-player">
+    <source src="audio/audio_guide_en.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+  <details class="accessible-transcript">
+    <summary>Read the transcript in English</summary>
+
+    <p>
+      Welcome to Affect Coordinates. This project explores how colour features in images
+      can be translated into emotional map positions.
+    </p>
+
+    <p>
+      The map uses two dimensions. Valence describes how unpleasant or pleasant an image may feel.
+      Arousal describes how calm or intense an image may feel.
+    </p>
+
+    <p>
+      The project uses hue, saturation, and brightness to place images on this map.
+      However, the map is not a final judgement of emotion. It is a way to make a
+      colour-based computational reading visible, so that it can be compared with human interpretation.
+    </p>
+
+    <p>
+      Some images are selected as ambiguous cases because colour alone does not fully explain how they feel.
+      Faces, gestures, composition, lighting, and atmosphere can all change how an image is read.
+    </p>
+
+    <p>
+      You can use this accessible entrance as a simpler route through the exhibition.
+      You can read the method, go directly to the selected cases, take part in the audience annotation section,
+      or contact the project.
+    </p>
+  </details>
+</div>
+
+<div class="audio-language-panel" data-lang-panel="zh">
+  <audio controls preload="none" class="accessible-audio-player">
+    <source src="audio/audio_guide_zh.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <details class="accessible-transcript">
+    <summary>阅读中文文本</summary>
+
+    <p>
+      欢迎来到 Affect Coordinates。这个项目探索的是：图像中的颜色特征，如何被转化为情绪地图上的位置。
+    </p>
+
+    <p>
+      这张地图使用两个维度。Valence 描述一张图像可能让人感到不愉快还是愉快。
+      Arousal 描述一张图像可能让人感到平静还是强烈。
+    </p>
+
+    <p>
+      这个项目使用色相、饱和度和亮度，将图像放置在这张地图上。
+      然而，这张地图并不是对情绪的最终判断。它是一种让基于颜色的计算性解读变得可见的方式，
+      使它可以与人的解释进行比较。
+    </p>
+
+    <p>
+      有些图像被选为 Ambiguous Readings，因为仅仅依靠颜色，并不能完全解释它们给人的感受。
+      面孔、姿态、构图、光线和氛围，都可能改变一张图像被阅读的方式。
+    </p>
+
+    <p>
+      你可以通过这个 Accessible Entrance，以一种更简单的方式进入展览。
+      你可以阅读方法说明，直接进入 selected cases，参与 audience annotation，或者联系这个项目。
+    </p>
+  </details>
+</div>
+
+<div class="audio-language-panel" data-lang-panel="es">
+  <audio controls preload="none" class="accessible-audio-player">
+    <source src="audio/audio_guide_es.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <details class="accessible-transcript">
+    <summary>Leer la transcripción en español</summary>
+
+    <p>
+      Bienvenida y bienvenido a Affect Coordinates. Este proyecto explora cómo las características de color
+      en las imágenes pueden traducirse en posiciones dentro de un mapa afectivo.
+    </p>
+
+    <p>
+      El mapa utiliza dos dimensiones. La valencia describe hasta qué punto una imagen puede sentirse desagradable o agradable.
+      La activación describe hasta qué punto una imagen puede sentirse tranquila o intensa.
+    </p>
+
+    <p>
+      El proyecto utiliza el tono, la saturación y el brillo para situar las imágenes en este mapa.
+      Sin embargo, el mapa no es un juicio final sobre la emoción. Es una forma de hacer visible una lectura computacional
+      basada en el color, para que pueda compararse con la interpretación humana.
+    </p>
+
+    <p>
+      Algunas imágenes se seleccionan como lecturas ambiguas porque el color por sí solo no explica completamente cómo se sienten.
+      Los rostros, los gestos, la composición, la iluminación y la atmósfera pueden cambiar la manera en que se lee una imagen.
+    </p>
+
+    <p>
+      Puedes usar esta entrada accesible como una ruta más sencilla por la exposición.
+      Puedes leer el método, ir directamente a los casos seleccionados, participar en la anotación del público o contactar con el proyecto.
+    </p>
+  </details>
+</div>
+
+  <div class="accessible-summary reveal-on-scroll">
+    <h3>What this project is about</h3>
+
+    <p>
+      Affect Coordinates explores how colour features in images can be translated into emotional map positions.
+      Each image is placed on a Valence–Arousal map using hue, saturation, and brightness.
+    </p>
+
+    <p>
+      Valence means how unpleasant or pleasant an image may feel.
+      Arousal means how calm or intense an image may feel.
+      The map is not a final judgement of emotion. It offers a colour-based reading that can be compared with human interpretation.
+    </p>
+  </div>
+
+  <div class="accessible-route reveal-on-scroll">
+    <h3>Choose a route</h3>
+
+    <div class="accessible-route-grid">
+      <a href="#methodSection" class="accessible-route-card">
+        <span>01</span>
+        <h4>Read the method</h4>
+        <p>
+          Learn how each image first receives a colour-based position from its hue, saturation,
+          and brightness, and how this position is then adjusted through author rating to create
+          its final place on the map.
+        </p>
+      </a>
+
+      <a href="#ambiguousSection" class="accessible-route-card">
+        <span>02</span>
+        <h4>Read selected cases</h4>
+        <p>
+          Go directly to the ambiguous cases, where colour alone does not fully explain how the images feel.
+        </p>
+      </a>
+
+      <a href="#audienceSection" class="accessible-route-card">
+        <span>03</span>
+        <h4>Share your reading</h4>
+        <p>
+          Take part in the audience annotation section by rating five randomly selected images.
+        </p>
+      </a>
+
+      <a href="#contactSection" class="accessible-route-card">
+        <span>04</span>
+        <h4>Contact the project</h4>
+        <p>
+          Share feedback, report an issue, ask a question, or leave a note.
+        </p>
+      </a>
+    </div>
+  </div>
+
+  <div class="accessible-notes reveal-on-scroll">
+    <h3>Access notes</h3>
+
+    <ul>
+      <li>You can use this page without clicking small points on the main map.</li>
+      <li>You do not need to use hover effects or open pop-up windows to understand the project.</li>
+      <li>The audio guide is optional. It will only play if you choose to press play.</li>
+      <li>The audience rating page uses sliders from 1 to 9. The middle point is 5.</li>
+      <li>In most browsers, you can move the sliders with your keyboard arrow keys.</li>
+      <li>If anything feels confusing or difficult to use, you can leave a note in the Contact section.</li>
+    </ul>
+
+    <p>
+      This page is to make the exhibition easier to enter and follow.
+      This is not a full accessibility review, but it offers a calmer and clearer way to explore the project.
+    </p>
+  </div>
+
+  <div class="accessible-bottom-nav">
+    <a href="#heroSection" class="section-link-button accessible-link">
+      Back to Home
+    </a>
+  </div>
+</section>
+
+  <!-- Image modal -->
+  <div id="imageModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close-button" aria-label="Close image pop-up">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="miniPlotTooltip" class="mini-plot-tooltip hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
