@@ -1,0 +1,240 @@
+{
+  "updated_at": "2026-07-14T12:17:21.048654+00:00",
+  "total_rating_rows": 30,
+  "total_participants": 6,
+  "image_count_with_responses": 29,
+  "ratings": {
+    "abstract_12_id11139222": {
+      "audience_valence_1_9": 2.0,
+      "audience_arousal_1_9": 8.0,
+      "audience_valence_norm": 0.125,
+      "audience_arousal_norm": 0.875,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "abstract_18_id7245073": {
+      "audience_valence_1_9": 5.5,
+      "audience_arousal_1_9": 4.0,
+      "audience_valence_norm": 0.562,
+      "audience_arousal_norm": 0.375,
+      "response_count": 2,
+      "participant_count": 2
+    },
+    "abstract_28_id30598227": {
+      "audience_valence_1_9": 5.0,
+      "audience_arousal_1_9": 6.0,
+      "audience_valence_norm": 0.5,
+      "audience_arousal_norm": 0.625,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "abstract_43_id2815799": {
+      "audience_valence_1_9": 7.0,
+      "audience_arousal_1_9": 9.0,
+      "audience_valence_norm": 0.75,
+      "audience_arousal_norm": 1.0,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "abstract_45_id27547851": {
+      "audience_valence_1_9": 5.0,
+      "audience_arousal_1_9": 6.0,
+      "audience_valence_norm": 0.5,
+      "audience_arousal_norm": 0.625,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "abstract_59_id30756266": {
+      "audience_valence_1_9": 3.0,
+      "audience_arousal_1_9": 7.0,
+      "audience_valence_norm": 0.25,
+      "audience_arousal_norm": 0.75,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "indoor_05_id31090396": {
+      "audience_valence_1_9": 9.0,
+      "audience_arousal_1_9": 1.0,
+      "audience_valence_norm": 1.0,
+      "audience_arousal_norm": 0.0,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "indoor_12_id34772399": {
+      "audience_valence_1_9": 5.0,
+      "audience_arousal_1_9": 2.0,
+      "audience_valence_norm": 0.5,
+      "audience_arousal_norm": 0.125,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "indoor_15_id11741418": {
+      "audience_valence_1_9": 6.0,
+      "audience_arousal_1_9": 3.0,
+      "audience_valence_norm": 0.625,
+      "audience_arousal_norm": 0.25,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "indoor_27_id9336723": {
+      "audience_valence_1_9": 7.0,
+      "audience_arousal_1_9": 2.0,
+      "audience_valence_norm": 0.75,
+      "audience_arousal_norm": 0.125,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "indoor_48_id15214815": {
+      "audience_valence_1_9": 7.0,
+      "audience_arousal_1_9": 2.0,
+      "audience_valence_norm": 0.75,
+      "audience_arousal_norm": 0.125,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "indoor_49_id30695799": {
+      "audience_valence_1_9": 2.0,
+      "audience_arousal_1_9": 2.0,
+      "audience_valence_norm": 0.125,
+      "audience_arousal_norm": 0.125,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "nature_01_id28836499": {
+      "audience_valence_1_9": 6.0,
+      "audience_arousal_1_9": 3.0,
+      "audience_valence_norm": 0.625,
+      "audience_arousal_norm": 0.25,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "nature_26_id29159501": {
+      "audience_valence_1_9": 3.0,
+      "audience_arousal_1_9": 3.0,
+      "audience_valence_norm": 0.25,
+      "audience_arousal_norm": 0.25,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "nature_45_id28125220": {
+      "audience_valence_1_9": 8.0,
+      "audience_arousal_1_9": 2.0,
+      "audience_valence_norm": 0.875,
+      "audience_arousal_norm": 0.125,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "nature_46_id31439700": {
+      "audience_valence_1_9": 9.0,
+      "audience_arousal_1_9": 3.0,
+      "audience_valence_norm": 1.0,
+      "audience_arousal_norm": 0.25,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "portrait_08_id36687795": {
+      "audience_valence_1_9": 5.0,
+      "audience_arousal_1_9": 6.0,
+      "audience_valence_norm": 0.5,
+      "audience_arousal_norm": 0.625,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "portrait_10_id30940154": {
+      "audience_valence_1_9": 1.0,
+      "audience_arousal_1_9": 9.0,
+      "audience_valence_norm": 0.0,
+      "audience_arousal_norm": 1.0,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "portrait_23_id30609707": {
+      "audience_valence_1_9": 4.0,
+      "audience_arousal_1_9": 6.0,
+      "audience_valence_norm": 0.375,
+      "audience_arousal_norm": 0.625,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "portrait_27_id36383643": {
+      "audience_valence_1_9": 7.0,
+      "audience_arousal_1_9": 6.0,
+      "audience_valence_norm": 0.75,
+      "audience_arousal_norm": 0.625,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "portrait_38_id36702975": {
+      "audience_valence_1_9": 5.0,
+      "audience_arousal_1_9": 5.0,
+      "audience_valence_norm": 0.5,
+      "audience_arousal_norm": 0.5,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "portrait_46_id34460849": {
+      "audience_valence_1_9": 2.0,
+      "audience_arousal_1_9": 4.0,
+      "audience_valence_norm": 0.125,
+      "audience_arousal_norm": 0.375,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "portrait_56_id31207851": {
+      "audience_valence_1_9": 2.0,
+      "audience_arousal_1_9": 4.0,
+      "audience_valence_norm": 0.125,
+      "audience_arousal_norm": 0.375,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "portrait_60_id36700233": {
+      "audience_valence_1_9": 5.0,
+      "audience_arousal_1_9": 7.0,
+      "audience_valence_norm": 0.5,
+      "audience_arousal_norm": 0.75,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "urban_05_id35886131": {
+      "audience_valence_1_9": 3.0,
+      "audience_arousal_1_9": 4.0,
+      "audience_valence_norm": 0.25,
+      "audience_arousal_norm": 0.375,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "urban_09_id36424142": {
+      "audience_valence_1_9": 7.0,
+      "audience_arousal_1_9": 2.0,
+      "audience_valence_norm": 0.75,
+      "audience_arousal_norm": 0.125,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "urban_32_id29642407": {
+      "audience_valence_1_9": 5.0,
+      "audience_arousal_1_9": 5.0,
+      "audience_valence_norm": 0.5,
+      "audience_arousal_norm": 0.5,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "urban_55_id32507928": {
+      "audience_valence_1_9": 6.0,
+      "audience_arousal_1_9": 6.0,
+      "audience_valence_norm": 0.625,
+      "audience_arousal_norm": 0.625,
+      "response_count": 1,
+      "participant_count": 1
+    },
+    "urban_59_id5185424": {
+      "audience_valence_1_9": 8.0,
+      "audience_arousal_1_9": 8.0,
+      "audience_valence_norm": 0.875,
+      "audience_arousal_norm": 0.875,
+      "response_count": 1,
+      "participant_count": 1
+    }
+  }
+}
