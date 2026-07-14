@@ -81,26 +81,77 @@ imageModal.addEventListener("click", (event) => {
   }
 });
 
-// Step 4: Load image data from data.json
+// Step 4: Load image data from data.json and audience.json
 
-fetch("data.json")
-  .then(response => response.json())
-  .then(images => {
-    allImagesData = images;
+Promise.all([
+  fetch("data.json").then(response => {
+    if (!response.ok) {
+      throw new Error(`Could not load data.json: ${response.status}`);
+    }
 
-    statusMessage.textContent = `Loaded ${images.length} images.`;
-    console.log("Loaded image data:", images);
+    return response.json();
+  }),
 
-// Create image points after the data is loaded
-    renderMapPoints(images);
-    renderAudienceRatingCards(images);
+  fetch("audience_ratings.json")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(
+          `Could not load audience_ratings.json: ${response.status}`
+        );
+      }
+
+      return response.json();
+    })
+    .catch(error => {
+      console.warn("Audience ratings could not be loaded:", error);
+
+      return {
+        ratings: {}
+      };
+    })
+])
+  .then(([images, audienceData]) => {
+    const ratingsByImage = audienceData.ratings || {};
+
+    const imagesWithAudienceRatings = images.map(image => {
+      const audienceRating = ratingsByImage[image.image_id];
+
+      if (!audienceRating) {
+        return {
+          ...image,
+          audience_valence: null,
+          audience_arousal: null,
+          responses: 0
+        };
+      }
+
+      return {
+        ...image,
+        audience_valence: audienceRating.audience_valence_norm,
+        audience_arousal: audienceRating.audience_arousal_norm,
+        responses: audienceRating.response_count
+      };
+    });
+
+    allImagesData = imagesWithAudienceRatings;
+
+    statusMessage.textContent =
+      `Loaded ${imagesWithAudienceRatings.length} images.`;
+
+    console.log(
+      "Loaded image data with audience ratings:",
+      imagesWithAudienceRatings
+    );
+
+    renderMapPoints(imagesWithAudienceRatings);
+    renderAudienceRatingCards(imagesWithAudienceRatings);
 
     if (ambiguousCasesData.length > 0) {
-    renderMiniPlots(ambiguousCasesData);
-  }
+      renderMiniPlots(ambiguousCasesData);
+    }
   })
   .catch(error => {
-    statusMessage.textContent = "Could not load data.json.";
+    statusMessage.textContent = "Could not load image data.";
     console.error("Data loading error:", error);
   });
 
